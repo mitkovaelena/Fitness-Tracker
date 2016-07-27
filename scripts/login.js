@@ -1,0 +1,1 @@
+importScripts("scripts/app.js");
