@@ -4,6 +4,8 @@
     <title>Fitness Tracker</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/form-style.css">
+    <link rel="stylesheet" href="css/videoBgr.css">
+
     <script src="scripts/jquery-3.0.0.min.js"></script>
     <script src="scripts/app.js"></script>
     <script type="text/javascript">
@@ -13,6 +15,10 @@
     </script>
 </head>
 <body class="background-image-welcome">
+
+<video autoplay loop poster preload muted="images/fitnessBgr.jpg" id="bgvid">
+    <source src="images/bgrVideo.mp4" type="video/mp4">
+</video>
 
 <section id="loadingBox">Loading...</section>
 <section id="infoBox" onclick="$(this).fadeOut()">Info...</section>
