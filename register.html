@@ -15,6 +15,74 @@
     </script>
 </head>
 <body class="background-image-register">
+
+<section id="loadingBox">Loading...</section>
+<section id="infoBox" onclick="$(this).fadeOut()">Info...</section>
+<section id="errorBox" onclick="$(this).fadeOut()">Error...</section>
+<script>$('section').hide();</script>
+
+<header class="page-title">
+    sign up
+</header>
+<hr id="page-title-underline">
+
+<aside class="sidebar">
+    <div class="logo"><img src="images/gym.ico" alt="" style=" height: 100px;
+    width: 100px;"></div>
+    <hr>
+    <nav>
+        <ul>
+            <li class="single-menu-element">
+                <a href="welcome-guest.html" class="single-menu-element-link">
+                    Home
+                </a>
+            </li>
+
+            <li class="single-menu-element">
+                <a href="login.html" class="single-menu-element-link">
+                    Login
+                </a>
+            </li>
+
+            <li class="single-menu-element">
+                <a href="register.html" class="single-menu-element-link">
+                    Sign Up
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <hr>
+</aside>
+
+
+<div class="user-login-block">
+    <form class="user-register">
+        <h1 class="form-title">Username:</h1>
+        <input type="text" value="" placeholder="Enter Username" id="username"/>
+        <h1 class="form-title">Full Name:</h1>
+        <input type="text" value="" placeholder="Enter Full Name" id="full-name"/>
+        <h1 class="form-title">Gender:</h1>
+        <select id="gender">
+            <option hidden>Gender</option>
+            <option>Male</option>
+            <option>Female</option>
+        </select>
+        <h1 class="form-title">Email:</h1>
+        <input type="email" value="" placeholder="Enter Email" id="email"/>
+        <h1 class="form-title">Trainer:</h1>
+        <select id="trainer">
+            <option hidden>Trainer</option>
+            <option>Pesho</option>
+            <option>Gosho</option>
+        </select>
+        <h1 class="form-title">Password:</h1>
+        <input type="password" value="" placeholder="Enter Password" id="password"/>
+        <br>
+        <button type="button" id="register-request-button">Sign Up</button>
+    </form>
+    <a href="login.html" id="redirect-button">Login here</a>
+</div>
+<br><br><br>
 <footer>
     <p>&copy; Team JavaScript power! presents: Fitness Tracker v1.0, No Rights Reserved</p>
 </footer>

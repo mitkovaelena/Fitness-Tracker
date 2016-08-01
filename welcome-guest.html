@@ -14,10 +14,66 @@
 </head>
 <body class="background-image-welcome">
 
+<section id="loadingBox">Loading...</section>
+<section id="infoBox" onclick="$(this).fadeOut()">Info...</section>
+<section id="errorBox" onclick="$(this).fadeOut()">Error...</section>
+<script>$('section').hide();</script>
+
+<aside class="sidebar">
+    <div class="logo"><img src="images/gym.ico" alt="" style=" height: 100px;
+    width: 100px;"></div>
+    <hr>
+    <nav>
+        <ul>
+            <li class="single-menu-element">
+                <a href="welcome-guest.html" class="single-menu-element-link">
+                    Home
+                </a>
+            </li>
+
+            <li class="single-menu-element">
+                <a href="login.html" class="single-menu-element-link">
+                    Login
+                </a>
+            </li>
+
+            <li class="single-menu-element">
+                <a href="register.html" class="single-menu-element-link">
+                    Sign Up
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <hr>
+</aside>
+
+<header class="page-title">
+    home
+</header>
+<hr id="page-title-underline">
+
+<div class="user-login-block" style="font: 18px Candal; width: 920px; margin-left:
+287px; padding-bottom: 50px; padding-left: 25px; padding-right: 25px; text-align: justify;  opacity: 0.6;
+  filter: alpha(opacity=60); ">
+    <p style="font: 32px Candal; text-align: center">FITNESS TRACKER</p>
+    <br>
+    <p style="font: 26px Candal; text-align: center">Be aware of your achievements</p>
+    <br>
+    <p style="font: 20px Candal; text-align: center">Fitness Tracker is a free app useful for both athletes and
+        trainers</p>
+    <br>
+    Here fitness athletes can observe their everyday workout
+    progress and achievements. They can also receive professional help and advice from
+    their trainers.
+    <br>Grow up your "fitness maniac" level and get some
+    great nicknames such as fitness monster and others.Easy way to stay aware of your development as a sportsman.
+    <br>
+    Trainers have full data access to the athletes' progress and have a easy way to observe them all.
+</div>
+
+
 <footer>
-    <p>&copy; Team JavaScript power! presents: Fitness Tracker v1.0, No Rights Reserved
-        <!--Test Ivan-->
-    </p>
+    <p>&copy; Team JavaScript power! presents: Fitness Tracker v1.0, No Rights Reserved</p>
 </footer>
 </body>
 </html>
