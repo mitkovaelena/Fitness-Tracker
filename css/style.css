@@ -1,0 +1,20 @@
+.file-upload {
+    position: relative;
+    overflow: hidden;
+    margin: 20px;
+
+}
+.file-upload input[type="file"] {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer;
+}
+
+.file-upload:hover {
+    cursor:pointer;
+}
+
