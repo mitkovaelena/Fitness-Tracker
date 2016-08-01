@@ -57,12 +57,21 @@
 
 <div class="user-login-block">
     <form class="user-register">
-
-        <img class="profile-pic" src="" />
+        <img id="output" class="profile-pic" src="http://media-minecraftforum.cursecdn.com/avatars/336/363/635357691690366795.gif" />
         <h1 class="form-title">Upload Image:</h1>
         <label class="file-upload">
             <img src="https://snappa.io/assets/img/feature_upload.png"  width="90" height="60" alt="" />
-            <input type="file" />
+            <input type="file" accept="image/*" onchange="loadFile(event)"/>
+            <script>
+                var loadFile = function(event) {
+                    var reader = new FileReader();
+                    reader.onload = function(){
+                        var output = document.getElementById('output');
+                        output.src = reader.result;
+                    };
+                    reader.readAsDataURL(event.target.files[0]);
+                };
+            </script>
         </label>
         <h1 class="form-title">Username:</h1>
         <input type="text" value="" placeholder="Enter Username" id="username"/>
