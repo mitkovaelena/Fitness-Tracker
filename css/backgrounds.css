@@ -1,0 +1,92 @@
+video#bgvid {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url("../images/fitnessBgr.jpg") no-repeat;
+    background-size: cover;
+}
+
+.background-image-login {
+    background: url("../images/woman-perspiration-fitness.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: auto;
+
+}
+.background-image-register {
+    background: url("../images/Men-Body-Fitness-Muscles-Wallpaper.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: auto;
+}
+
+.background-image-activity {
+    background: url("../images/fitness_girl_gym_black_woman_people_hd-wallpaper-1914094.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: auto;
+
+}
+.background-image-profile {
+    background: url("../images/dark_fitness_man.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: auto;
+
+}
+
+.background-image-activityLog {
+    background: url("../images/man_woman_bodybuilding.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: auto;
+    position: fixed;
+}
+
+
+.background-image-ranking {
+    background: url("../images/success.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: auto;
+
+}

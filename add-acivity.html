@@ -4,11 +4,15 @@
     <title>Fitness Tracker</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/form-style.css">
+	<link rel="stylesheet" href="css/backgrounds.css">
+
+    <script src="scripts/jquery-3.0.0.min.js"></script>
     <script src="scripts/app.js"></script>
     <script src="scripts/profile.js"></script>
     <script src="scripts/ranking.js" ></script>
     <script src="scripts/add-activity.js" ></script>
-    <script src="scripts/jquery-3.0.0.min.js"></script>
+    <script src="scripts/activity-log.js"></script>
+
     <script type="text/javascript">
         $(document).ready(function () {
             start();
@@ -16,6 +20,72 @@
     </script>
 </head>
 <body class="background-image-activity">
+
+<section id="loadingBox">Loading...</section>
+<section id="levelUpBox" onclick="$(this).fadeOut()"> <br><br>Congratulations! <br><br> You levelled up! <br><br> <!--An email notification will be sent to your Trainer!--> <br><br> Keep training!</section>
+<section id="infoBox" onclick="$(this).fadeOut()">Info...</section>
+<section id="errorBox" onclick="$(this).fadeOut()">Error...</section>
+<script>$('section').hide();</script>
+
+<aside class="sidebar">
+    <div class="logo"><img src="images/gym.ico" alt="" style=" height: 100px;
+    width: 100px;"></div>
+    <hr>
+    <nav>
+        <ul>
+            <li class="single-menu-element">
+                <a href="profile.html" class="single-menu-element-link">
+                    Profile
+                </a>
+            </li>
+
+            <li class="single-menu-element" style="height: 70px; padding: 20px;">
+                <a href="add-acivity.html" class="single-menu-element-link">
+                    Add Activity
+                </a>
+            </li>
+
+            <li class="single-menu-element">
+                <a href="activity-Log.html" class="single-menu-element-link">
+                    Activity Log
+                </a>
+            </li>
+
+            <li class="single-menu-element">
+                <a href="ranking.html" class="single-menu-element-link">
+                    Ranking
+                </a>
+            </li>
+
+            <li class="single-menu-element">
+                <a href="#" onclick="logout()" class="single-menu-element-link">
+                    Logout
+                </a>
+            </li>
+        </ul>
+        <hr>
+    </nav>
+</aside>
+
+<header class="page-title">
+    add activity
+</header>
+<hr id="page-title-underline">
+
+<div class="user-form-block">
+    <form>
+        <h1 class="form-title">Time Spent At The Gym Today</h1>
+        <input type="number" min="0" value="" placeholder="Enter Minutes" id="timeAtTheGym"/>
+        <h1 class="form-title">Maximum Weight Lifted:</h1>
+        <input type="number" min="0" value="" placeholder="Enter Kilograms" id="kg">
+        <h1 class="form-title">Kilometers ran:</h1>
+        <input type="number" min="0" value="" placeholder="Enter Number" id="km">
+        <br>
+        <button type="button" id="submit-activity-button">Submit</button>
+    </form>
+
+</div>
+
 
 <footer>
     <p>&copy; Team JavaScript power! presents: Fitness Tracker v1.0, No Rights Reserved</p>

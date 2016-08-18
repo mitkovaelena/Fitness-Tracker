@@ -1,29 +1,296 @@
-.profile-pic {
-    max-width: 200px;
-    max-height: 200px;
-    display: block;
-    margin: 20px;
-    padding-left: 137px;
-    border-radius: 100%;
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Candal);
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
 }
 
-.file-upload {
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section {
+    display: block;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+#loadingBox{
+    background: cornflowerblue;
+    font-size: 15pt;
+    text-align: center;
+}
+#infoBox{
+    background: greenyellow;
+    font-size: 15pt;
+    text-align: center;
+}
+#errorBox{
+    background: lightsalmon;
+    font-size: 15pt;
+    text-align: center;
+}
+
+#levelUpBox{
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    overflow: auto;
+    background: #cbff49;
+    font-size: 20pt;
+    color: darkgreen;
+    text-align: center;
+    margin:  13% 30%;
+    width: 45%;
+    height: 55%;
+    padding: 20px; border-radius: 30px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.page-title{
+    white-space: nowrap;
+    color: #FDFFC7;
+}
+
+body {
+    line-height: 1;
+    font-family: Montserrat;
+    font-size: 40px;
+    color: #565656;
+}
+
+hr {
+    color: rgba(255, 255, 255, 0.5);
+    margin: 15px auto;
+    border: none;
+    border-bottom: 1px solid white;
+    width: 60%;
+}
+
+main {
+    margin: 0 auto;
+    min-height: inherit;
+    width: 80%;
     position: relative;
-    overflow: hidden;
-    margin: 20px;
-
+    float: right;
 }
-.file-upload input[type="file"] {
-    display: block;
-    position: absolute;
+
+header {
+    position: relative;
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+}
+
+.page-title {
+    white-space: nowrap;
+    color: #FDFFC7;
+    font: 54px Candal;
+    font-weight: 600;
+    margin: 0 auto 50px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#page-title-underline{
+    border-bottom: 8px solid #FFC141;
+    width: auto;
+}
+
+.sidebar {
+    float: left;
+    width: 20%;
+    height: 100%;
+    background-color: #FFD858;
+    color: white;
+    font-family: Montserrat;
+    font-size: 40px;
+    font-weight: 100;
+    text-align: center;
     top: 0;
-    right: 0;
-    opacity: 0;
-    filter: alpha(opacity=0);
-    cursor: pointer;
+    left: 0;
+    bottom: 0;
+    position: fixed;
 }
 
-.file-upload:hover {
-    cursor:pointer;
+.logo {
+    padding-top: 15px;
+    padding-bottom: 15px;
+
 }
+
+.single-menu-element-link {
+    text-decoration: none;
+    color: white;
+    -moz-transition-property: font-weight;
+    -moz-transition-duration: 1s;
+    -moz-transition-timing-function: linear;
+    -moz-transition-delay: 0.5s;
+    -webkit-transition-property: font-weight;
+    -webkit-transition-duration: 1s;
+    -webkit-transition-timing-function: linear;
+    -webkit-transition-delay: 0.5s;
+    font-weight: 300;
+}
+
+.single-menu-element-link:hover {
+    font-weight: 900;
+    transition: background 0.7s ease,
+    padding 0.5s linear;
+}
+
+.single-menu-element:hover {
+    font-weight: 900;
+    background-color: #FFC141;
+    height: 35px;
+    line-height: 37px;
+    transition: background 0.7s ease, padding 0.5s linear;
+}
+
+.single-menu-element {
+    padding: 10px;
+}
+footer {
+    display: none;
+    color: #FDFFC7;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 20px;
+    margin: auto;
+    height: 60px;
+    position: fixed;
+}
+
+a {
+    text-decoration: none;
+    color: #565656;
+    display: block;
+    display: inline;	
+}
+
+h2 {
+    position: absolute;
+    margin: -50px 74px 10px;
+    font: 13px Candal;
+}
+
+
+
 
