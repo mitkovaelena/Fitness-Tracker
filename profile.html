@@ -24,6 +24,11 @@
 </head>
 <body class="background-image-profile">
 
+<section id="loadingBox">Loading...</section>
+<section id="infoBox" onclick="$(this).fadeOut()">Info...</section>
+<section id="errorBox" onclick="$(this).fadeOut()">Error...</section>
+<script>$('section').hide();</script>
+
     <aside class="sidebar">
         <div class="logo"><img src="images/gym.ico" alt="" style=" height: 100px;
     width: 100px;"></div>
@@ -65,6 +70,72 @@
             <hr>
         </nav>
     </aside>
+
+    <header class="page-title">
+        profile
+    </header>
+    <hr id="page-title-underline">
+    <div class="profile">
+        <h1 class="form-title" id="username" style = "margin: 5px 50px 0; text-align: left"></h1>
+        <script>document.write(profilePic())</script>
+        <h1 class="profile-title">Level <span id="level" style="color: rgb(194, 44, 23); font-size: 20px"></span></h1>
+        <br>
+        <h1 class="profile-title" style = "margin-top: 22px">Name: <span id="name" style="font-family: Italic; font-weight: bold"></span></h1>
+
+        <h1 class="profile-title">Gender: <span id="gender" style="font-family: Italic; font-weight: bold"></span></h1>
+        <br>
+        <div class="meter" style = "width: 200px; margin: -170px 225px -550px">
+            <span id="bar"></span>
+            <script>document.getElementById("bar").style.width=getLevelBar()+"%"</script>
+        </div>
+        <h1 class="profile-title">Rank: <br> <a  class="profile-title" style="font-weight: normal; text-decoration: underline; color: rgb(194, 44, 23); font-size: 16px" href="ranking.html">To Ranking List</a></h1>
+
+        <br>
+        <h1 class="profile-title">Achievements:</h1>
+    <ul class="icons">
+        <li id="1bw" class="icons"><a><img src="images/achievements/Pacifier-48bw.png"/>
+        <li id="1" class="icons"><a><img src="images/achievements/Pacifier-48.png"/>
+        <div>Baby Runner (50km)</div></a></li>
+        <li id="2bw" class="icons"><a><img src="images/achievements/Trainers-48bw.png"/>
+        <li id="2" class="icons"><a ><img src="images/achievements/Trainers-48.png"/>
+        <div>Ongoing (100km)</div></a></li>
+        <li id="3bw" class="icons"><a><img src="images/achievements/Jump%20Rope-48bw.png"/>
+        <li id="3" class="icons"><a><img src="images/achievements/Jump%20Rope-48.png"/>
+        <div>Halfway There (200km)</div></a></li>
+         <li id="4bw" class="icons"><a><img src="images/achievements/Treadmill-48bw.png"/>
+        <li id="4" class="icons"><a><img src="images/achievements/Treadmill-48.png"/>
+        <div>Marathoner (300km)</div></a></li>
+        <li id="5bw" class="icons"><a><img src="images/achievements/Curls%20With%20Dumbbells-48bw.png"/>
+        <li id="5" class="icons"><a><img src="images/achievements/Curls%20With%20Dumbbells-48.png"/>
+        <div>Getting Started (50kg)</div></a></li>
+        <li id="6bw" class="icons"><a><img src="images/achievements/Bench%20Press%20With%20Dumbbells-48bw.png"/>
+        <li id="6" class="icons"><a><img src="images/achievements/Bench%20Press%20With%20Dumbbells-48.png"/>
+        <div>Enthusiast (100kg)</div></a></li>
+        <li id="7bw" class="icons"><a><img src="images/achievements/Flex%20Biceps-48bw.png"/>
+        <li id="7" class="icons"><a><img src="images/achievements/Flex%20Biceps-48.png"/>
+        <div>Almost Perfect (200kg)</div></a></li>
+        <li id="8bw" class="icons"><a><img src="images/achievements/Weightlifting-48bw.png"/>
+        <li id="8" class="icons"><a><img src="images/achievements/Weightlifting-48.png"/>
+        <div>Fitness Monster (300kg)</div></a></li>
+        <li id="9bw" class="icons"><a><img src="images/achievements/Medal%20First%20Place-48bw.png"/>
+        <li id="9"  class="icons"><a><img src="images/achievements/Medal%20First%20Place-48.png"/>
+            <div>Top User</div></a></li>
+        <li id="10bw" class="icons"><a><img src="images/achievements/Medal%20Second%20Place-48bw.png"/>
+        <li id="10" class="icons"><a><img src="images/achievements/Medal%20Second%20Place-48.png"/>
+        <div>Top 2 User</div></a></li>
+        <li id="11bw" class="icons"><a><img src="images/achievements/Medal%20Third%20Place-48bw.png"/>
+        <li id="11" class="icons"><a><img src="images/achievements/Medal%20Third%20Place-48.png"/>
+        <div>Top 3 User</div></a></li>
+        <li id="12bw" class="icons"><a><img src="images/achievements/Olympic%20Rings-48bw.png"/>
+        <li id="12" class="icons"><a><img src="images/achievements/Olympic%20Rings-48.png"/>
+        <div>You Got It All!</div></a></li>
+
+        <script>
+        hideAchivements();
+        </script>
+
+    </ul>
+    </div>
     <footer>
         <p>&copy; Team JavaScript power! presents: Fitness Tracker v1.0, No Rights Reserved</p>
     </footer>
