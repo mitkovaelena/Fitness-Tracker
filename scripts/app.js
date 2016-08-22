@@ -25,28 +25,3 @@ function start() {
         }
     });
 }
-
-
-function showInfo(message) {
-    $('#infoBox').text(message);
-    $('#infoBox').show();
-    setTimeout(function () { $('#infoBox').fadeOut()}, 3000)
-}
-function showError(errorMsg) {
-    $('#errorBox').text("Error:" + errorMsg);
-    $('#errorBox').show();
-}
-
-function levelUp() {
-        $('#levelUpBox').show();
-}
-
-function logout() {
-    sessionStorage.clear();
-    window.location.replace("index.html");
-}
-
-function handleAjaxError(data, status) {
-    let errorMsg = "Error :" +  JSON.stringify(data);
-    $("#errorBox").text(errorMsg).show();
-}
