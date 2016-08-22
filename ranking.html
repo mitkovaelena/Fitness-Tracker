@@ -20,47 +20,71 @@
 </head>
 <body class="background-image-ranking">
 
-    <aside class="sidebar">
-        <div class="logo"><img src="images/gym.ico" alt="" style=" height: 100px;
+<section id="loadingBox">Loading...</section>
+<section id="infoBox" onclick="$(this).fadeOut()">Info...</section>
+<section id="errorBox" onclick="$(this).fadeOut()">Error...</section>
+<script>$('section').hide();</script>
+
+<aside class="sidebar">
+    <div class="logo"><img src="images/gym.ico" alt="" style=" height: 100px;
     width: 100px;"></div>
-        <hr>
-        <nav>
-            <ul>
-                <li class="single-menu-element">
+    <hr>
+    <nav>
+        <ul>
+            <li class="single-menu-element">
                 <a href="profile.html" class="single-menu-element-link">
                     Profile
                 </a>
             </li>
 
-                <li class="single-menu-element" style = "height: 70px; padding: 20px;">
-                    <a href="add-acivity.html" class="single-menu-element-link">
-                        Add Activity
-                    </a>
-                </li>
+            <li class="single-menu-element" style="height: 70px; padding: 20px;">
+                <a href="add-acivity.html" class="single-menu-element-link">
+                    Add Activity
+                </a>
+            </li>
 
-                <li class="single-menu-element">
-                    <a href="activity-Log.html" class="single-menu-element-link">
-                        Activity Log
-                    </a>
-                </li>
+            <li class="single-menu-element">
+                <a href="activity-Log.html" class="single-menu-element-link">
+                    Activity Log
+                </a>
+            </li>
 
-                <li class="single-menu-element">
-                    <a href="ranking.html" class="single-menu-element-link">
-                        Ranking
-                    </a>
-                </li>
+            <li class="single-menu-element">
+                <a href="ranking.html" class="single-menu-element-link">
+                    Ranking
+                </a>
+            </li>
 
+            <li class="single-menu-element">
+                <a href="#" onclick="logout()" class="single-menu-element-link">
+                    Logout
+                </a>
+            </li>
+        </ul>
+        <hr>
+    </nav>
+</aside>
 
+<header class="page-title">
+    ranking
+</header>
+<hr id="page-title-underline">
 
-                <li class="single-menu-element">
-                    <a href="#" onclick="logout()" class="single-menu-element-link">
-                        Logout
-                    </a>
-                </li>
-            </ul>
-            <hr>
-        </nav>
-    </aside>
+<table align="center" style="margin: 1% auto; margin-left: 35%; margin-bottom: 50px">
+    <thead>
+    <tr>
+        <th style="width: 150px">Rank</th>
+        <th style="width: 150px">Gender</th>
+        <th style="width: 150px">Name</th>
+        <th style="width: 150px">Level
+            <script>$("table th").addClass("headerSortUp");</script>
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    <script> rankingTable();</script>
+    </tbody>
+</table>
 <footer>
     <p>&copy; Team JavaScript power! presents: Fitness Tracker v1.0, No Rights Reserved</p>
 </footer>
