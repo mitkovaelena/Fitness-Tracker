@@ -10,6 +10,7 @@
     <script src="scripts/app.js"></script>
     <script src="scripts/register.js"></script>
     <script src="scripts/profile.js"></script>
+
     <script type="text/javascript">
         $(document).ready(function () {
             start();
@@ -59,21 +60,12 @@
 
 <div class="user-form-block">
     <form class="user-register">
-        <img id="output" class="profile-pic" src="http://media-minecraftforum.cursecdn.com/avatars/336/363/635357691690366795.gif" />
+	<img id="output" class="profile-pic" src="images/profile/profile." />
+        <div id="imgTest" style="display:none"></div>
         <h1 class="form-title">Upload Image:</h1>
         <label class="file-upload">
             <img src="https://snappa.io/assets/img/feature_upload.png"  width="90" height="60" alt="" />
-            <input type="file" accept="image/*" onchange="loadFile(event)"/>
-            <script>
-                var loadFile = function(event) {
-                    var reader = new FileReader();
-                    reader.onload = function(){
-                        var output = document.getElementById('output');
-                        output.src = reader.result;
-                    };
-                    reader.readAsDataURL(event.target.files[0]);
-                };
-            </script>
+            <input id="inputFileToLoad" type="file" onchange="encodeImageFileAsURL();" />
         </label>
         <h1 class="form-title">Username:</h1>
         <input type="text" value="" placeholder="Enter Username" id="username"/>

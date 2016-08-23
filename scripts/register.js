@@ -1,11 +1,26 @@
-var loadFile = function(event) {
-    var reader = new FileReader();
-    reader.onload = function(){
-        var output = document.getElementById('output');
-        output.src = reader.result;
-    };
-    reader.readAsDataURL(event.target.files[0]);
-};
+function encodeImageFileAsURL() {
+
+    var filesSelected = document.getElementById("inputFileToLoad").files;
+    if (filesSelected.length > 0) {
+        var fileToLoad = filesSelected[0];
+
+        var fileReader = new FileReader();
+
+        fileReader.onload = function(fileLoadedEvent) {
+            var srcData = fileLoadedEvent.target.result; // <--- data: base64
+
+            var newImage = document.createElement('img');
+            newImage.src = srcData;
+
+            document.getElementById("imgTest").innerHTML = newImage.outerHTML;
+            alert("Converted Base64 version is " + document.getElementById("imgTest").innerHTML);
+            console.log("Converted Base64 version is " + document.getElementById("imgTest").innerHTML);
+
+            document.getElementById("output").src = newImage.src;
+        }
+        fileReader.readAsDataURL(fileToLoad);
+    }
+}
 
 function register() {
 
