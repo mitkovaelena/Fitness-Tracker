@@ -13,15 +13,14 @@ function encodeImageFileAsURL() {
             newImage.src = srcData;
 
             document.getElementById("imgTest").innerHTML = newImage.outerHTML;
-            alert("Converted Base64 version is " + document.getElementById("imgTest").innerHTML);
-            console.log("Converted Base64 version is " + document.getElementById("imgTest").innerHTML);
+           
+            //console.log("Converted Base64 version is " + document.getElementById("imgTest").innerHTML);
 
             document.getElementById("output").src = newImage.src;
         }
         fileReader.readAsDataURL(fileToLoad);
     }
 }
-
 function register() {
 
     const kinveyRegUrl = kinveyBaseUrl + "user/" + kinveyAppKey + "/";
@@ -33,6 +32,7 @@ function register() {
     let email = $('#email').val();
     let trainer = $("#trainer").val();
     let password = $('#password').val();
+    let profilePic = document.getElementById("imgTest").innerHTML;
 
 
     let data = {
@@ -45,7 +45,8 @@ function register() {
         level: 1,
         minutes: 0,
         kg: 0,
-        km: 0
+        km: 0,
+        profilePic: profilePic
     };
 
     $.ajax({
