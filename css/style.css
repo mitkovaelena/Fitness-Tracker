@@ -133,17 +133,26 @@ q:after {
 
 #loadingBox{
     background: cornflowerblue;
-    font-size: 15pt;
+    font-size: 17pt;
+    position: fixed;
+    width: 100%;
+	 z-index: 990;
     text-align: center;
 }
 #infoBox{
     background: greenyellow;
-    font-size: 15pt;
+    font-size: 17pt;
+    position: fixed;
+    width: 100%;
+	 z-index: 990;
     text-align: center;
 }
 #errorBox{
     background: lightsalmon;
-    font-size: 15pt;
+    font-size: 17pt;
+    position: fixed;
+    width: 100%;
+	 z-index: 990;
     text-align: center;
 }
 
@@ -162,10 +171,6 @@ q:after {
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
-.page-title{
-    white-space: nowrap;
-    color: #FDFFC7;
-}
 
 body {
     line-height: 1;
@@ -226,11 +231,12 @@ header {
     left: 0;
     bottom: 0;
     position: fixed;
+	 z-index: 989;
 }
 
 .logo {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 10%;
+    padding-bottom: 10%;
 
 }
 

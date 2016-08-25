@@ -4,6 +4,12 @@ function encodeImageFileAsURL() {
     if (filesSelected.length > 0) {
         var fileToLoad = filesSelected[0];
 
+        if (fileToLoad.size > 70000) // 65 kb for bytes.
+        {
+            showError("File size must under 65kb!");
+            return;
+        }
+
         var fileReader = new FileReader();
 
         fileReader.onload = function(fileLoadedEvent) {
@@ -13,7 +19,7 @@ function encodeImageFileAsURL() {
             newImage.src = srcData;
 
             document.getElementById("imgTest").innerHTML = newImage.outerHTML;
-           
+
             //console.log("Converted Base64 version is " + document.getElementById("imgTest").innerHTML);
 
             document.getElementById("output").src = newImage.src;
@@ -33,6 +39,16 @@ function register() {
     let trainer = $("#trainer").val();
     let password = $('#password').val();
     let profilePic = document.getElementById("imgTest").innerHTML;
+
+    if(username.length < 3) { showError("Your username should be at least 3 characters long"); return}
+    if(fullName.length < 3) { showError("Your full name should be at least 3 characters long"); return}
+    if(gender == "Gender") { showError("Please choose your gender");return}
+    if(email.length < 6) { showError("Your email should be at least 6 characters long"); return}
+    if(email.indexOf("@") == -1) { showError("Your email should contain '@'"); return}
+    if(email.indexOf(".") == -1) { showError("Your email should contain '.'"); return}
+    if(trainer == "Trainer") { showError("Please choose your trainer");return}
+    if(password.length < 3) { showError("Your password should be at least 3 characters long"); return}
+
 
 
     let data = {

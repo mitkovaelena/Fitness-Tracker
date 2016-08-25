@@ -62,11 +62,12 @@
     <form class="user-register">
 	<img id="output" class="profile-pic" src="images/profile/profile.gif" />
         <div id="imgTest" style="display:none"></div>
-        <h1 class="form-title">Upload Image:</h1>
+        <h1 class="form-title" style="margin-bottom: 8px;">Upload Image:</h1>
         <label class="file-upload">
             <img src="images/profile/upload.png"  width="90" height="60" alt="" />
             <input id="inputFileToLoad" type="file" onchange="encodeImageFileAsURL();" />
         </label>
+        <div class="form-title" style="font-size:16px; color: #FFD858; margin-bottom: 8px;">Maximum size: 70 kb</div>
         <h1 class="form-title">Username:</h1>
         <input type="text" value="" placeholder="Enter Username" id="username"/>
         <h1 class="form-title">Full Name:</h1>
