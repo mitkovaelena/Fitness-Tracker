@@ -156,21 +156,17 @@ q:after {
     text-align: center;
 }
 
-#levelUpBox{
+#levelUpBox, #levelUp{
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
-    overflow: auto;
-    background: #cbff49;
     font-size: 20pt;
     color: darkgreen;
     text-align: center;
-    margin:  13% 30%;
+    margin:  10% 25%;
     width: 45%;
     height: 55%;
-    padding: 20px; border-radius: 30px;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    padding: 20px;
 }
-
 
 body {
     line-height: 1;
