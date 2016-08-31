@@ -10,6 +10,7 @@
     var gender = userData.gender;
     var email = userData.email;
     var trainerName = userData.trainerName;
+        var profilePic = userData.profilePic;
 
     var time;
     var kg;
@@ -41,7 +42,8 @@
         level: level,
         minutes: time,
         kg: kg,
-        km: km
+        km: km,
+        profilePic: profilePic
     };
 
     $.ajax({
