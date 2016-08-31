@@ -45,11 +45,11 @@ function activityLogTable() {
     }
 
     for (var j = 1; j <= userActivity.length; j++) {
-        let date = userActivity[j - 1].date;
-        let hour = userActivity[j - 1].hour;
-        let time = userActivity[j - 1].time;
-        let kg = userActivity[j - 1].kg;
-        let km = userActivity[j - 1].km;
+        let date = userActivity[userActivity.length-j ].date;
+        let hour = userActivity[userActivity.length-j].hour;
+        let time = userActivity[userActivity.length-j ].time;
+        let kg = userActivity[userActivity.length-j ].kg;
+        let km = userActivity[userActivity.length-j ].km;
         document.write('<tr> <td>' + date + '</td> <td>' + hour + '</td> <td>'
             + time + '</td> <td>' + kg + '</td> <td>' + km + '</td></tr>');
     }
