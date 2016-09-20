@@ -163,7 +163,7 @@ var person;
             all++;
         }
     }
-    if (all == 12) {
+    if (all == 11) {
         $('#12bw').hide();
         $('#12').show();
     }
